@@ -2,13 +2,13 @@
 
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
-use Silex\Provider\RoutingServiceProvider;
+use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\HttpFragmentServiceProvider;
 
 $app = new Application();
-$app->register(new RoutingServiceProvider());
+$app->register(new UrlGeneratorServiceProvider);
 $app->register(new ValidatorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
